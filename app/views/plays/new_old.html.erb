@@ -8,19 +8,20 @@
 <div class = "part" style="border:solid">
 <img src="<%=a.image%>" style="width:60px;height:auto">
 <br />
-<%= f.radio_button :score, a.a1s %>
-<%= f.label a.a1  %>
+	<%= f.radio_button :score, "a.a1s" %>
+	<%= f.label :score, "a.a1"  %>
 <br />
 
-<%= f.radio_button :score, a.a2s %>
-<%= f.label a.a2  %>
+<%= f.radio_button :score, "a.a2s"  %>
+<%= f.label :score, "a.a2"  %>
 <br />		
 
-<%= f.radio_button :score, a.a3s %>
-<%= f.label a.a3  %>
+<%= f.radio_button :score, "a.a3s"  %>
+<%= f.label :score, "a.a3" %>
 <br />	
-<%= f.radio_button :score, a.a4s %>
-<%= f.label a.a4  %>
+
+<%= f.radio_button :score, "a.a4s"  %>
+<%= f.label :score, "a.a4"  %>
 <br />	
 </div>
 <% end %>

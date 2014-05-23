@@ -1,15 +1,15 @@
 class PlaysController < ApplicationController
   def index
     @plays = Play.all 
-    @questions = Question.last(10)
+    @questions = Question.all
   end
 def show
 end
   def create
+    @questions = Question.all
     @play = Play.new
-    @questions = Question.first(1)
     @play.username = params[:play][:username]
-    @play.score = 0
+    @play.score  = params[:play][:score]
     @play.save!
     redirect_to :action => :index 
   end
@@ -20,7 +20,7 @@ end
 
   def update
     @play = Play.find(params[:id])
-    @play.score  = params[:user][:score]
+    @play.score  = params[:play][:score]
     @play.save!
     redirect_to :action => :index 
   end
@@ -32,6 +32,8 @@ end
   end
 
   def new
+    #render 'test'
     @play = Play.new
+    @questions = Question.all
   end
 end
