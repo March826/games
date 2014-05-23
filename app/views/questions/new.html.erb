@@ -1,0 +1,26 @@
+<h1>New Question</h1>
+<%= form_for :thing, url: questions_path do |r| %>
+    <%= r.label :image %> URL
+    <%= r.text_field :image %><br>
+    <%= r.label :q %>
+    <%= r.text_field :q %><br>
+    <%= r.label :a1 %>
+    <%= r.text_field :a1 %><br>
+    <%= r.label :a1s %>
+    <%= r.number_field :a1s %><br>
+    <%= r.label :a2 %>
+    <%= r.text_field :a2 %><br> 
+    <%= r.label :a2s %>
+    <%= r.number_field :a2s %><br>
+    <%= r.label :a3 %>
+    <%= r.text_field :a3 %><br> 
+    <%= r.label :a3s %>
+    <%= r.number_field :a3s %><br>
+    <%= r.label :a4 %>
+    <%= r.text_field :a4 %><br> 
+    <%= r.label :a4s %>
+    <%= r.number_field :a4s %><br> 
+  <p>
+    <%= r.submit %>
+  </p>
+<% end %>

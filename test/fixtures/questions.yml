@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  q: MyString
+  a1: MyString
+  a1s: 1
+  a2: MyString
+  a2s: 1
+  a3: MyString
+  a3s: 1
+  a4: MyString
+  a4s: 1
+
+two:
+  image: MyString
+  q: MyString
+  a1: MyString
+  a1s: 1
+  a2: MyString
+  a2s: 1
+  a3: MyString
+  a3s: 1
+  a4: MyString
+  a4s: 1

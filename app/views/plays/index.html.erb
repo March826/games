@@ -1,0 +1,56 @@
+<h1>Plays#index</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<td>ID</td>
+			<td>playname</td>
+			<td>Score</td>
+
+		</tr>
+	</thead>
+	<tbody>
+		<% @plays.each do |play| %>		
+		<tr>
+			<td><%= play.id %></td>
+			<td><%= play.username %></td>
+			<td><%= play.score %></td>
+			<td><%= play.questions %></td>
+			
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<h1>Questions#index</h1>
+<h2>All Questions</h2>
+<a href="/questions/new">Add Question</a>
+<table>
+<thead>
+<tr>
+<td><b>ID</b></td>
+<td></td>
+<td><b>Movie Title</b></td>
+<td><b>Correct Answer</b></td>
+</tr>
+</thead>
+<tbody>
+<% @questions.each do |a| %>
+<tr>
+<td><%= a.id %></td>
+<td><img src="<%=a.image%>" style="width:60px;height:auto"></td>
+<td><a href="/questions/<%=a.id%>/edit"><%= a.q %></a></td>
+<td>
+<% if a.a1s != 0%>
+	<%= a.a1 %>
+<%elsif a.a2s != 0%>
+	<%= a.a2 %>
+<%elsif a.a3s != 0%>
+	<%= a.a3 %>
+<%else%>
+	<%= a.a4 %>
+<%end%>
+</td>
+<td><%=link_to "Delete", question_path(a), :method => :delete, :class => "delete", :confirm => "Are you sure ?"%></td>
+</tr>
+<% end %>
+</tbody>
+</table>
